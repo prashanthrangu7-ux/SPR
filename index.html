@@ -26,7 +26,10 @@
                 <img class="brand-mark" src="images/SPR Consultants Logo.jpeg" alt="SPR Consultants logo">
                 <span class="brand-name">SPR <span>Consultants</span></span>
             </a>
-            <ul class="nav-links">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="primary-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#advisory">Advisory</a></li>
@@ -319,5 +322,28 @@
     <!-- Floating action buttons -->
     <a href="#home" class="home-float" aria-label="Back to home" title="Back to home">↑ Home</a>
     <a href="https://wa.me/917799138118" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">💬 WhatsApp</a>
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector(".nav");
+        const menuLinks = document.querySelectorAll(".nav-links a");
+
+        if (menuToggle && nav) {
+            menuToggle.addEventListener("click", () => {
+                const isOpen = nav.classList.toggle("menu-open");
+                menuToggle.setAttribute("aria-expanded", String(isOpen));
+                menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+                document.body.classList.toggle("menu-open", isOpen);
+            });
+
+            menuLinks.forEach((link) => {
+                link.addEventListener("click", () => {
+                    nav.classList.remove("menu-open");
+                    document.body.classList.remove("menu-open");
+                    menuToggle.setAttribute("aria-expanded", "false");
+                    menuToggle.setAttribute("aria-label", "Open navigation menu");
+                });
+            });
+        }
+    </script>
 </body>
 </html>
