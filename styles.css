@@ -654,11 +654,10 @@ h2 {
     border-top: 1px solid var(--line);
 }
 
-.partner-layout {
-    align-items: center;
+.partner-grid {
     display: grid;
-    gap: 38px;
-    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-top: 42px;
 }
 
@@ -690,9 +689,6 @@ h2 {
     z-index: 2;
 }
 
-.partner-layout + .partner-layout {
-    margin-top: 28px;
-}
 
 .partner-photo {
     aspect-ratio: 1;
@@ -971,7 +967,7 @@ footer {
     .hero-inner,
     .advisory-layout,
     .about-layout,
-    .partner-layout,
+    .partner-grid,
     .contact-layout {
         grid-template-columns: 1fr;
     }
@@ -995,9 +991,6 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .partner-layout {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (max-width: 620px) {
