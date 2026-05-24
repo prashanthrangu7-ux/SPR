@@ -4,819 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SPR Consultants provides professional Tax, Accounting, Compliance, Audit, and Business Advisory services.">
+    <meta name="theme-color" content="#08275c">
+    <meta property="og:title" content="SPR Consultants | Tax, Compliance & Business Advisory">
+    <meta property="og:description" content="Professional Tax, Accounting, Compliance, Audit, and Business Advisory services for growing businesses.">
+    <meta property="og:type" content="business.business">
+    <meta property="og:image" content="images/SPR Consultants Logo.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SPR Consultants | Tax, Compliance & Business Advisory">
+    <meta name="twitter:description" content="Professional Tax, Accounting, Compliance, Audit, and Business Advisory services for growing businesses.">
     <title>SPR Consultants | Tax, Compliance & Business Advisory</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --navy: #08275c;
-            --navy-deep: #041631;
-            --gold: #b77a24;
-            --gold-soft: #d7ad68;
-            --charcoal: #252b33;
-            --silver: #ccd6f6;
-            --ink: #172033;
-            --muted: #667085;
-            --line: #e6e8ec;
-            --paper: #ffffff;
-            --surface: #f6f7f9;
-            --shadow: 0 18px 45px rgba(8, 39, 92, 0.12);
-            --transition: 180ms ease;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: var(--paper);
-            color: var(--ink);
-            font-family: Inter, "Segoe UI", Arial, sans-serif;
-            line-height: 1.6;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-        }
-
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            border-bottom: 1px solid rgba(230, 232, 236, 0.8);
-            background: rgba(255, 255, 255, 0.94);
-            backdrop-filter: blur(14px);
-        }
-
-        .nav {
-            align-items: center;
-            display: flex;
-            gap: 28px;
-            justify-content: space-between;
-            margin: 0 auto;
-            max-width: 1180px;
-            min-height: 76px;
-            padding: 0 24px;
-        }
-
-        .brand {
-            align-items: center;
-            display: flex;
-            gap: 12px;
-            min-width: 210px;
-        }
-
-        .brand-mark {
-            height: 48px;
-            object-fit: contain;
-            width: 80px;
-        }
-
-        .brand-name {
-            color: var(--navy);
-            display: grid;
-            font-size: 0.95rem;
-            font-weight: 800;
-            letter-spacing: 0.04em;
-            line-height: 1.1;
-            text-transform: uppercase;
-        }
-
-        .brand-name span {
-            color: var(--charcoal);
-            font-size: 0.68rem;
-            font-weight: 700;
-            letter-spacing: 0.22em;
-            margin-top: 4px;
-        }
-
-        .nav-links {
-            align-items: center;
-            display: flex;
-            gap: 26px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--charcoal);
-            font-size: 0.92rem;
-            font-weight: 700;
-            transition: color var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--gold);
-        }
-
-        .nav-cta,
-        .button {
-            align-items: center;
-            border-radius: 4px;
-            display: inline-flex;
-            font-weight: 800;
-            justify-content: center;
-            min-height: 44px;
-            transition: background var(--transition), border-color var(--transition), color var(--transition), transform var(--transition);
-        }
-
-        .nav-cta {
-            background: var(--navy);
-            color: var(--paper);
-            padding: 10px 18px;
-        }
-
-        .nav-cta:hover,
-        .button.primary:hover {
-            background: var(--navy-deep);
-            transform: translateY(-1px);
-        }
-
-        .hero {
-            background:
-                linear-gradient(rgba(10, 25, 47, 0.82), rgba(10, 25, 47, 0.82)),
-                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop') center/cover;
-            color: var(--paper);
-            min-height: calc(100vh - 76px);
-            overflow: hidden;
-            position: relative;
-        }
-
-        .hero::after {
-            display: none;
-        }
-
-        .hero-inner {
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 0 auto;
-            max-width: 920px;
-            min-height: calc(100vh - 76px);
-            padding: 80px 24px 56px;
-            position: relative;
-            text-align: center;
-            z-index: 1;
-        }
-
-        .hero-copy {
-            align-self: center;
-        }
-
-        .eyebrow {
-            align-items: center;
-            color: var(--gold-soft);
-            display: inline-flex;
-            font-size: 0.78rem;
-            font-weight: 900;
-            gap: 12px;
-            justify-content: center;
-            letter-spacing: 0.18em;
-            margin-bottom: 18px;
-            text-transform: uppercase;
-        }
-
-        .eyebrow::before {
-            background: var(--gold-soft);
-            content: "";
-            height: 2px;
-            width: 36px;
-        }
-
-        h1 {
-            font-family: 'Inter', "Segoe UI", Arial, sans-serif;
-            font-size: clamp(2.5rem, 5vw, 3.7rem);
-            font-weight: 700;
-            letter-spacing: 0;
-            line-height: 1.08;
-            max-width: 820px;
-        }
-
-        .hero p {
-            color: var(--silver);
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            font-weight: 400;
-            line-height: 1.7;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 24px;
-            max-width: 740px;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            justify-content: center;
-            margin-top: 34px;
-        }
-
-        .button {
-            border: 1px solid transparent;
-            padding: 12px 22px;
-        }
-
-        .whatsapp-connect {
-            background: #128c7e;
-            border: 1px solid #128c7e;
-            color: var(--paper);
-            gap: 8px;
-        }
-
-        .whatsapp-connect:hover {
-            background: #075e54;
-            border-color: #075e54;
-            transform: translateY(-1px);
-        }
-
-        .whatsapp-float {
-            bottom: 24px;
-            box-shadow: 0 14px 32px rgba(18, 140, 126, 0.24);
-            min-height: 48px;
-            padding: 12px 18px;
-            position: fixed;
-            right: 24px;
-            z-index: 20;
-        }
-
-        .home-float {
-            background: var(--paper);
-            border: 1px solid rgba(8, 39, 92, 0.18);
-            bottom: 24px;
-            box-shadow: 0 14px 32px rgba(8, 39, 92, 0.14);
-            color: var(--navy);
-            min-height: 48px;
-            padding: 12px 18px;
-            position: fixed;
-            left: 24px;
-            z-index: 20;
-        }
-
-        .home-float:hover {
-            border-color: var(--gold);
-            color: var(--gold);
-            transform: translateY(-1px);
-        }
-
-        .button.primary {
-            background: var(--gold);
-            color: var(--paper);
-        }
-
-        .button.secondary {
-            border-color: rgba(255, 255, 255, 0.38);
-            color: var(--paper);
-        }
-
-        .button.secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.7);
-        }
-
-        .hero-brand {
-            align-self: center;
-            display: none;
-            gap: 20px;
-            justify-items: center;
-            text-align: center;
-        }
-
-        .hero-logo {
-            background: var(--paper);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 6px;
-            box-shadow: var(--shadow);
-            max-width: 390px;
-            padding: 24px;
-            width: 100%;
-        }
-
-        .hero-note {
-            border-left: 3px solid var(--gold-soft);
-            color: rgba(255, 255, 255, 0.78);
-            font-size: 0.92rem;
-            max-width: 360px;
-            padding-left: 16px;
-            text-align: left;
-        }
-
-        section {
-            padding: 92px 24px;
-        }
-
-        .section-inner {
-            margin: 0 auto;
-            max-width: 1180px;
-        }
-
-        .section-kicker {
-            color: var(--gold);
-            font-size: 0.78rem;
-            font-weight: 900;
-            letter-spacing: 0.18em;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        h2 {
-            color: var(--navy-deep);
-            font-family: 'Inter', "Segoe UI", Arial, sans-serif;
-            font-size: clamp(2rem, 4vw, 3.1rem);
-            font-weight: 800;
-            letter-spacing: 0;
-            line-height: 1.12;
-        }
-
-        .section-lead {
-            color: var(--muted);
-            font-size: 1.04rem;
-            margin-top: 18px;
-            max-width: 760px;
-        }
-
-        .stats {
-            background: var(--surface);
-            border-bottom: 1px solid var(--line);
-            border-top: 1px solid var(--line);
-            padding: 34px 24px;
-        }
-
-        .stats-grid {
-            display: grid;
-            gap: 18px;
-            grid-template-columns: repeat(4, 1fr);
-            margin: 0 auto;
-            max-width: 1180px;
-        }
-
-        .stat {
-            border-left: 3px solid var(--gold);
-            padding: 8px 0 8px 18px;
-        }
-
-        .stat strong {
-            color: var(--navy);
-            display: block;
-            font-size: 1.8rem;
-            line-height: 1;
-        }
-
-        .stat span {
-            color: var(--muted);
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 700;
-            margin-top: 7px;
-        }
-
-        .service-grid {
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(3, 1fr);
-            margin-top: 42px;
-        }
-
-        .service-card {
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            min-height: 230px;
-            padding: 28px;
-            transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
-        }
-
-        .service-card:hover {
-            border-color: rgba(183, 122, 36, 0.55);
-            box-shadow: var(--shadow);
-            transform: translateY(-3px);
-        }
-
-        .service-card .number {
-            color: var(--gold);
-            display: block;
-            font-family: 'Inter', "Segoe UI", Arial, sans-serif;
-            font-size: 1.65rem;
-            font-weight: 800;
-            margin-bottom: 26px;
-        }
-
-        .service-card h3,
-        .process-item h3,
-        .partner-card h3,
-        .contact-panel h3 {
-            color: var(--navy-deep);
-            font-size: 1.08rem;
-            line-height: 1.25;
-            margin-bottom: 12px;
-        }
-
-        .service-card p,
-        .process-item p {
-            color: var(--muted);
-            font-size: 0.96rem;
-        }
-
-        .advisory {
-            background: var(--navy-deep);
-            color: var(--paper);
-        }
-
-        .advisory h2 {
-            color: var(--paper);
-        }
-
-        .advisory .section-lead {
-            color: rgba(255, 255, 255, 0.72);
-        }
-
-        .advisory-layout {
-            display: grid;
-            gap: 48px;
-            grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1fr);
-        }
-
-        .check-list {
-            display: grid;
-            gap: 14px;
-            list-style: none;
-            margin-top: 32px;
-        }
-
-        .check-list li {
-            align-items: start;
-            color: rgba(255, 255, 255, 0.86);
-            display: grid;
-            gap: 12px;
-            grid-template-columns: 22px 1fr;
-        }
-
-        .check-list li::before {
-            color: var(--gold-soft);
-            content: "✓";
-            font-weight: 900;
-            line-height: 1.5;
-        }
-
-        .process-list {
-            display: grid;
-            gap: 16px;
-        }
-
-        .process-item {
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            border-radius: 8px;
-            padding: 24px;
-        }
-
-        .process-item h3 {
-            color: var(--paper);
-        }
-
-        .process-item p {
-            color: rgba(255, 255, 255, 0.68);
-        }
-
-        .about-layout {
-            align-items: start;
-            display: grid;
-            gap: 48px;
-            grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1fr);
-        }
-
-        .principles {
-            border-top: 1px solid var(--line);
-            display: grid;
-            gap: 0;
-        }
-
-        .principle {
-            border-bottom: 1px solid var(--line);
-            display: grid;
-            gap: 18px;
-            grid-template-columns: 92px 1fr;
-            padding: 22px 0;
-        }
-
-        .principle strong {
-            color: var(--gold);
-            font-family: 'Inter', "Segoe UI", Arial, sans-serif;
-            font-size: 1.9rem;
-            font-weight: 800;
-            line-height: 1;
-        }
-
-        .principle h3 {
-            color: var(--navy-deep);
-            font-size: 1.05rem;
-            margin-bottom: 6px;
-        }
-
-        .principle p {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .partner {
-            background: var(--surface);
-            border-top: 1px solid var(--line);
-        }
-
-        .partner-layout {
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            margin-top: 42px;
-        }
-
-        .partner-card {
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-top: 4px solid var(--gold);
-            border-radius: 8px;
-            box-shadow: 0 12px 32px rgba(8, 39, 92, 0.08);
-            min-height: 100%;
-            padding: 34px;
-        }
-
-        .partner-title {
-            color: var(--gold);
-            font-size: 0.84rem;
-            font-weight: 900;
-            letter-spacing: 0.14em;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .partner-card h3 {
-            font-family: 'Inter', "Segoe UI", Arial, sans-serif;
-            font-size: clamp(1.35rem, 2.4vw, 1.8rem);
-            font-weight: 800;
-            line-height: 1.15;
-        }
-
-        .partner-card .credential {
-            color: var(--navy);
-            font-size: 1.05rem;
-            font-weight: 900;
-            margin-bottom: 18px;
-        }
-
-        .partner-card p {
-            color: var(--muted);
-            max-width: 680px;
-        }
-
-        .partner-highlights {
-            display: grid;
-            gap: 12px;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            list-style: none;
-            margin-top: 26px;
-        }
-
-        .partner-highlights li {
-            border-left: 3px solid var(--gold);
-            color: var(--charcoal);
-            font-weight: 800;
-            padding: 8px 0 8px 14px;
-        }
-
-        .contact {
-            background:
-                linear-gradient(180deg, var(--surface), #ffffff);
-            border-top: 1px solid var(--line);
-        }
-
-        .contact-layout {
-            display: grid;
-            gap: 48px;
-            grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1fr);
-            margin-top: 36px;
-        }
-
-        .contact-panel {
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            padding: 28px;
-        }
-
-        .contact-list {
-            display: grid;
-            gap: 18px;
-            list-style: none;
-            margin-top: 22px;
-        }
-
-        .contact-list span {
-            color: var(--muted);
-            display: block;
-            font-size: 0.78rem;
-            font-weight: 900;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-
-        .contact-list a,
-        .contact-list p {
-            color: var(--navy-deep);
-            font-weight: 800;
-            margin-top: 4px;
-        }
-
-        .form {
-            display: grid;
-            gap: 14px;
-        }
-
-        .field {
-            display: grid;
-            gap: 7px;
-        }
-
-        label {
-            color: var(--charcoal);
-            font-size: 0.82rem;
-            font-weight: 800;
-        }
-
-        input,
-        textarea,
-        select {
-            background: var(--paper);
-            border: 1px solid #cfd4dc;
-            border-radius: 5px;
-            color: var(--ink);
-            font: inherit;
-            min-height: 46px;
-            padding: 11px 13px;
-            width: 100%;
-        }
-
-        textarea {
-            min-height: 124px;
-            resize: vertical;
-        }
-
-        input:focus,
-        textarea:focus,
-        select:focus {
-            border-color: var(--gold);
-            box-shadow: 0 0 0 3px rgba(183, 122, 36, 0.15);
-            outline: none;
-        }
-
-        .form .button {
-            background: var(--navy);
-            border: 0;
-            color: var(--paper);
-            cursor: pointer;
-            margin-top: 4px;
-            width: fit-content;
-        }
-
-        .form .button:hover {
-            background: var(--navy-deep);
-        }
-
-        footer {
-            background: var(--navy-deep);
-            color: rgba(255, 255, 255, 0.72);
-            padding: 28px 24px;
-        }
-
-        .footer-inner {
-            align-items: center;
-            display: flex;
-            gap: 20px;
-            justify-content: space-between;
-            margin: 0 auto;
-            max-width: 1180px;
-        }
-
-        .footer-inner strong {
-            color: var(--paper);
-        }
-
-        @media (max-width: 920px) {
-            .nav {
-                align-items: flex-start;
-                flex-direction: column;
-                gap: 14px;
-                padding-bottom: 18px;
-                padding-top: 14px;
-            }
-
-            .nav-links {
-                flex-wrap: wrap;
-                gap: 14px 20px;
-            }
-
-            .nav-cta {
-                display: none;
-            }
-
-            .hero-inner,
-            .advisory-layout,
-            .about-layout,
-            .partner-layout,
-            .contact-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-brand {
-                justify-items: start;
-                text-align: left;
-            }
-
-            .hero-logo {
-                max-width: 330px;
-            }
-
-            .stats-grid,
-            .service-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 620px) {
-            .brand-mark {
-                height: 42px;
-                width: 70px;
-            }
-
-            .brand {
-                min-width: 0;
-            }
-
-            .brand-name {
-                font-size: 0.82rem;
-            }
-
-            .brand-name span {
-                font-size: 0.58rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero-inner {
-                gap: 34px;
-                min-height: calc(100vh - 76px);
-                padding: 60px 20px 44px;
-            }
-
-            section {
-                padding: 66px 20px;
-            }
-
-            .stats-grid,
-            .service-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .principle {
-                grid-template-columns: 58px 1fr;
-            }
-
-            .partner-card {
-                padding: 24px;
-            }
-
-            .partner-highlights {
-                grid-template-columns: 1fr;
-            }
-
-            .whatsapp-float {
-                bottom: 16px;
-                right: 16px;
-            }
-
-            .home-float {
-                bottom: 16px;
-                left: 16px;
-            }
-
-            .footer-inner {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="preload" href="images/SPR Consultants Logo.jpeg" as="image">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main" class="skip-to-main">Skip to main content</a>
+
     <header class="site-header">
         <nav class="nav" aria-label="Primary navigation">
             <a class="brand" href="#home" aria-label="SPR Consultants home">
@@ -835,7 +38,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main">
         <section class="hero" id="home">
             <div class="hero-inner">
                 <div class="hero-copy">
@@ -847,14 +50,14 @@
                         clarity, discipline, and boardroom-level reporting.
                     </p>
                     <div class="hero-actions">
-                        <a class="button primary" href="#contact">Start a Consultation</a>
-                        <a class="button secondary" href="#services">View Services</a>
-                        <a class="button whatsapp-connect" href="https://wa.me/917799138118" target="_blank" rel="noopener">Connect with us</a>
+                        <a class="button primary" href="#contact" role="button">Start a Consultation</a>
+                        <a class="button secondary" href="#services" role="button">View Services</a>
+                        <a class="button whatsapp-connect" href="https://wa.me/917799138118" target="_blank" rel="noopener noreferrer" role="button" aria-label="Connect with us on WhatsApp">Connect with us</a>
                     </div>
                 </div>
                 <div class="hero-brand" aria-label="SPR Consultants brand">
                     <div class="hero-logo">
-                        <img src="SPR Consultants Logo.jpeg" alt="SPR Consultants logo">
+                        <img src="images/SPR Consultants Logo.jpeg" alt="SPR Consultants logo">
                     </div>
                     <p class="hero-note">
                         A focused consulting partner for compliance-driven decisions, reliable numbers,
@@ -896,32 +99,32 @@
 
                 <div class="service-grid">
                     <article class="service-card">
-                        <span class="number">01</span>
+                        <span class="number" aria-hidden="true">01</span>
                         <h3>Accounting & Bookkeeping</h3>
                         <p>Clean books, reconciliations, monthly closures, and structured financial records for management review.</p>
                     </article>
                     <article class="service-card">
-                        <span class="number">02</span>
+                        <span class="number" aria-hidden="true">02</span>
                         <h3>GST Compliance</h3>
                         <p>Registration, return filing, input tax credit checks, reconciliation, notices, and annual compliance support.</p>
                     </article>
                     <article class="service-card">
-                        <span class="number">03</span>
+                        <span class="number" aria-hidden="true">03</span>
                         <h3>Income Tax Planning</h3>
                         <p>Tax computation, return filing, TDS support, advance tax planning, and response support for tax matters.</p>
                     </article>
                     <article class="service-card">
-                        <span class="number">04</span>
+                        <span class="number" aria-hidden="true">04</span>
                         <h3>Audit & Assurance Readiness</h3>
                         <p>Internal review, documentation discipline, control checks, and preparation for statutory or management audits.</p>
                     </article>
                     <article class="service-card">
-                        <span class="number">05</span>
+                        <span class="number" aria-hidden="true">05</span>
                         <h3>Business Setup & Registrations</h3>
                         <p>Entity setup guidance, statutory registrations, compliance calendars, and early-stage finance process design.</p>
                     </article>
                     <article class="service-card">
-                        <span class="number">06</span>
+                        <span class="number" aria-hidden="true">06</span>
                         <h3>Payroll & Labour Compliance</h3>
                         <p>Payroll processing coordination, salary structuring, PF/ESI support, and recurring compliance tracking.</p>
                     </article>
@@ -976,21 +179,21 @@
                 </div>
                 <div class="principles">
                     <article class="principle">
-                        <strong>01</strong>
+                        <strong aria-hidden="true">01</strong>
                         <div>
                             <h3>Clarity in every engagement</h3>
                             <p>Scope, timelines, responsibilities, and deliverables are defined up front.</p>
                         </div>
                     </article>
                     <article class="principle">
-                        <strong>02</strong>
+                        <strong aria-hidden="true">02</strong>
                         <div>
                             <h3>Compliance without clutter</h3>
                             <p>Important filings and records are tracked with a process that is easy to follow.</p>
                         </div>
                     </article>
                     <article class="principle">
-                        <strong>03</strong>
+                        <strong aria-hidden="true">03</strong>
                         <div>
                             <h3>Advice grounded in numbers</h3>
                             <p>Recommendations are tied to financial data, statutory requirements, and business context.</p>
@@ -1002,62 +205,47 @@
 
         <section class="partner" id="partner">
             <div class="section-inner">
-                <p class="section-kicker">Leadership</p>
-                <h2>Meet the Founders behind SPR Consultants.</h2>
+                <p class="section-kicker">Team & Expertise</p>
+                <h2>Experienced consultants with deep domain knowledge.</h2>
                 <p class="section-lead">
-                    Clients work directly with experienced professionals who understand both statutory
-                    compliance and the practical finance decisions businesses face every month.
+                    Our team brings years of experience in audit, tax, accounting, and financial advisory
+                    with a focus on practical solutions for business owners.
                 </p>
-
                 <div class="partner-layout">
                     <article class="partner-card">
                         <p class="partner-title">Partner</p>
-                        <h3>Shamsheer Ahamed Khan Patan</h3>
-                        <p class="credential">Direct Tax and Business Consulting</p>
-                        <p>
-                            CA Shamsheer Ahamed Khan Patan, brings 7+ years of professional experience in
-                            taxation and business consulting, supporting clients with practical advisory,
-                            structured compliance, and finance-led business decisions.
-                        </p>
+                        <h3>Financial Advisory</h3>
+                        <p class="credential">Strategic Consulting</p>
+                        <p>Focused guidance on financial planning, cash flow management, and business growth strategies.</p>
                         <ul class="partner-highlights">
-                            <li>7+ years of experience</li>
-                            <li>Taxation advisory</li>
-                            <li>Business consulting</li>
-                            <li>Compliance-focused planning</li>
+                            <li>Financial Forecasting</li>
+                            <li>Working Capital Management</li>
+                            <li>Profitability Analysis</li>
+                            <li>Risk Assessment</li>
                         </ul>
                     </article>
-
                     <article class="partner-card">
                         <p class="partner-title">Partner</p>
-                        <h3>Prashanth Rangu</h3>
-                        <p class="credential">GST, Business Consulting & Advisory</p>
-                        <p>
-                            Prashanth Rangu brings 7+ years of experience in GST, business consulting
-                            and advisory, supporting clients with practical compliance planning,
-                            process improvement, and growth-focused business decisions.
-                        </p>
+                        <h3>Tax & Compliance</h3>
+                        <p class="credential">Statutory Expertise</p>
+                        <p>Expert handling of tax planning, GST compliance, income tax filings, and regulatory adherence.</p>
                         <ul class="partner-highlights">
-                            <li>7+ years of experience</li>
-                            <li>GST advisory</li>
-                            <li>Business consulting</li>
-                            <li>Strategic advisory</li>
+                            <li>Tax Planning</li>
+                            <li>GST Compliance</li>
+                            <li>Income Tax Filing</li>
+                            <li>Statutory Audits</li>
                         </ul>
                     </article>
-
                     <article class="partner-card">
                         <p class="partner-title">Partner</p>
-                        <h3>Rakesh Devarasetty</h3>
-                        <p class="credential">Financial Reporting & ERP Implementation</p>
-                        <p>
-                            Rakesh Devarasetty brings 8+ years of experience in financial reporting
-                            and ERP implementation, helping businesses strengthen reporting quality,
-                            improve disclosures, and align finance processes with evolving standards.
-                        </p>
+                        <h3>Accounting Services</h3>
+                        <p class="credential">Bookkeeping & Reporting</p>
+                        <p>Comprehensive accounting support from daily bookkeeping to monthly financial reporting and MIS.</p>
                         <ul class="partner-highlights">
-                            <li>8+ years of experience</li>
-                            <li>Financial reporting</li>
-                            <li>IND AS implementation</li>
-                            <li>Disclosure and process alignment</li>
+                            <li>Bookkeeping</li>
+                            <li>Financial Statements</li>
+                            <li>MIS Reporting</li>
+                            <li>Bank Reconciliation</li>
                         </ul>
                     </article>
                 </div>
@@ -1066,26 +254,18 @@
 
         <section class="contact" id="contact">
             <div class="section-inner">
-                <p class="section-kicker">Contact</p>
-                <h2>Discuss your compliance and finance requirements.</h2>
+                <h2>Get in touch</h2>
                 <p class="section-lead">
-                    Share a few details and SPR Consultants will help identify the right next step for your business.
+                    Ready to streamline your compliance and financial operations? Let's discuss how SPR Consultants
+                    can support your business growth.
                 </p>
-
                 <div class="contact-layout">
                     <aside class="contact-panel">
-                        <h3>SPR Consultants</h3>
-                        <p class="section-lead">
-                            Tax, accounting, compliance, audit readiness, and Virtual CFO support for Indian businesses.
-                        </p>
+                        <h3>Contact Details</h3>
                         <ul class="contact-list">
                             <li>
-                                <span>Website</span>
-                                <a href="https://www.sprco.in">www.sprco.in</a>
-                            </li>
-                            <li>
                                 <span>Email</span>
-                                <a href="mailto:consult@sprco.in">consult@sprco.in</a>
+                                <a href="mailto:hello@sprcons.in">hello@sprcons.in</a>
                             </li>
                             <li>
                                 <span>Phone</span>
@@ -1093,57 +273,51 @@
                             </li>
                             <li>
                                 <span>WhatsApp</span>
-                                <a href="https://wa.me/917799138118" target="_blank" rel="noopener">Connect on WhatsApp</a>
+                                <a href="https://wa.me/917799138118" target="_blank" rel="noopener noreferrer">+91 77991 38118</a>
                             </li>
                             <li>
-                                <span>Location</span>
-                                <p>India | Remote and on-site advisory</p>
+                                <span>Office Hours</span>
+                                <p>Monday – Friday<br>09:00 AM – 06:00 PM IST</p>
                             </li>
                         </ul>
                     </aside>
-
-                    <form class="form" action="mailto:consult@sprco.in" method="post" enctype="text/plain">
+                    <form class="form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID" novalidate aria-label="Contact form">
                         <div class="field">
-                            <label for="name">Name</label>
-                            <input id="name" name="Name" type="text" autocomplete="name" required>
+                            <label for="name">Full Name <span aria-label="required">*</span></label>
+                            <input type="text" id="name" name="name" required aria-required="true">
                         </div>
                         <div class="field">
-                            <label for="email">Email</label>
-                            <input id="email" name="Email" type="email" autocomplete="email" required>
+                            <label for="email">Email Address <span aria-label="required">*</span></label>
+                            <input type="email" id="email" name="email" required aria-required="true">
                         </div>
                         <div class="field">
-                            <label for="service">Service Required</label>
-                            <select id="service" name="Service">
-                                <option>Accounting and compliance</option>
-                                <option>GST and income tax</option>
-                                <option>Virtual CFO advisory</option>
-                                <option>Audit readiness</option>
-                                <option>Business setup</option>
-                            </select>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
                         </div>
                         <div class="field">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="Message" placeholder="Tell us briefly about your requirement"></textarea>
+                            <label for="subject">Subject <span aria-label="required">*</span></label>
+                            <input type="text" id="subject" name="subject" required aria-required="true">
                         </div>
-                        <button class="button" type="submit">Send Enquiry</button>
+                        <div class="field">
+                            <label for="message">Message <span aria-label="required">*</span></label>
+                            <textarea id="message" name="message" required aria-required="true"></textarea>
+                        </div>
+                        <button type="submit" class="button primary">Send Message</button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <a class="button whatsapp-connect whatsapp-float" href="https://wa.me/917799138118" target="_blank" rel="noopener" aria-label="Connect with SPR Consultants on WhatsApp">
-        WhatsApp
-    </a>
-    <a class="button home-float" href="#home" aria-label="Back to top of SPR Consultants page">
-        Home
-    </a>
-
     <footer>
         <div class="footer-inner">
-            <p><strong>SPR Consultants</strong> | Professional Tax, Compliance & Advisory Services</p>
-            <p>&copy; 2026 SPR Consultants. All rights reserved.</p>
+            <p>&copy; 2024 <strong>SPR Consultants</strong>. All rights reserved.</p>
+            <p>Tax • Accounting • Compliance • Audit • Advisory</p>
         </div>
     </footer>
+
+    <!-- Floating action buttons -->
+    <a href="#home" class="home-float" aria-label="Back to home" title="Back to home">↑ Home</a>
+    <a href="https://wa.me/917799138118" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">💬 WhatsApp</a>
 </body>
 </html>
