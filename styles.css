@@ -655,31 +655,65 @@ h2 {
 }
 
 .partner-layout {
+    align-items: center;
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 38px;
+    grid-template-columns: 220px minmax(0, 1fr);
     margin-top: 42px;
+}
+
+.partner-photo-card {
+    align-items: center;
+    background:
+        linear-gradient(var(--paper), var(--paper)) padding-box,
+        linear-gradient(135deg, var(--gold-soft), var(--navy), var(--charcoal)) border-box;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0 18px 36px rgba(8, 39, 92, 0.16);
+    display: flex;
+    height: 220px;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 8px;
+    position: relative;
+    width: 220px;
+}
+
+.partner-photo-card::before {
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
+    content: "";
+    inset: 10px;
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.partner-layout + .partner-layout {
+    margin-top: 28px;
+}
+
+.partner-photo {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 32%;
+    width: 100%;
+}
+
+.partner-photo.patan-photo {
+    object-position: 56% 28%;
+    transform: scale(1.16);
 }
 
 .partner-card {
     background: var(--paper);
     border: 1px solid var(--line);
-    border-top: 4px solid var(--gold);
     border-radius: 8px;
     box-shadow: 0 12px 32px rgba(8, 39, 92, 0.08);
-    min-height: 100%;
     padding: 34px;
-    transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.partner-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 45px rgba(8, 39, 92, 0.12);
-}
-
-.partner-card:focus-within {
-    outline: 2px solid var(--gold);
-    outline-offset: 0;
 }
 
 .partner-title {
@@ -957,9 +991,12 @@ footer {
     }
 
     .stats-grid,
-    .service-grid,
-    .partner-layout {
+    .service-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partner-layout {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -997,8 +1034,7 @@ footer {
     }
 
     .stats-grid,
-    .service-grid,
-    .partner-layout {
+    .service-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1010,6 +1046,11 @@ footer {
         padding: 24px;
     }
 
+    .partner-photo-card {
+        height: 188px;
+        width: 188px;
+    }
+
     .partner-highlights {
         grid-template-columns: 1fr;
     }
@@ -1017,91 +1058,15 @@ footer {
     .whatsapp-float {
         bottom: 16px;
         right: 16px;
-        padding: 10px 14px;
-        min-height: 44px;
-        font-size: 0.9rem;
     }
 
     .home-float {
         bottom: 16px;
         left: 16px;
-        padding: 10px 14px;
-        min-height: 44px;
-        font-size: 0.9rem;
     }
 
     .footer-inner {
         align-items: flex-start;
         flex-direction: column;
-        gap: 12px;
-    }
-
-    .footer-inner p {
-        font-size: 0.9rem;
-    }
-
-    h2 {
-        margin-bottom: 12px;
-    }
-
-    .contact-layout {
-        gap: 24px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-actions {
-        gap: 10px;
-    }
-
-    .button {
-        padding: 10px 16px;
-        font-size: 0.9rem;
-        min-height: 40px;
-    }
-
-    section {
-        padding: 48px 16px;
-    }
-
-    .stats-grid {
-        gap: 12px;
-    }
-
-    .stat {
-        padding: 6px 0 6px 12px;
-    }
-
-    .stat strong {
-        font-size: 1.4rem;
-    }
-
-    .stat span {
-        font-size: 0.85rem;
-    }
-
-    .service-card,
-    .partner-card,
-    .contact-panel {
-        padding: 20px;
-    }
-
-    .service-card .number {
-        font-size: 1.4rem;
-        margin-bottom: 16px;
-    }
-
-    .principle strong {
-        font-size: 1.5rem;
-    }
-
-    .check-list li {
-        gap: 8px;
-    }
-
-    input,
-    textarea,
-    select {
-        font-size: 16px;
     }
 }
